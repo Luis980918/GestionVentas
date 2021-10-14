@@ -15,11 +15,18 @@ public class Producto {
     @Column(name = "id")
     private Long id;
 
+    @Column(name="sku", nullable = false, length = 100)
+    private String sku;
+
     @Column(name="nombre", nullable = false, length = 100)
     private String nombre;
 
     @Column(name= "costo", nullable = false, length = 50)
     private BigDecimal costo;
+
+    @Column(name="stock")
+    private Integer stock;
+
 
     @Column(name="observacion", length = 250)
     private String observacion;
@@ -37,6 +44,22 @@ public class Producto {
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @JoinColumn(name="fk_administrador", insertable = false, updatable = false)
     private Usuario administrador;
+
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
 
     public BigDecimal getCosto() {
         return costo;

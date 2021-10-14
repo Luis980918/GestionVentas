@@ -10,9 +10,13 @@ public class ProductoDTO {
 
     private Long id;
     @NotNull
+    private String sku;
+    @NotNull
     private String nombre;
     @NotNull
     private BigDecimal costo;
+
+    private Integer stock;
     private String observacion;
     @NotNull
     private Boolean disponible;
@@ -21,6 +25,22 @@ public class ProductoDTO {
     private Long fkAdministrador;
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Usuario administrador;
+
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
 
     public Long getId() {
         return id;
