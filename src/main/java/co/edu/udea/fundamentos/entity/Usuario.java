@@ -33,20 +33,20 @@ public class Usuario {
     @Column(name = "tipo")
     private TipoUsuario tipo;
 
-    //Cliente
+    //Vendedor
 
     @Column(name = "fecha_ingreso")
     private LocalDate fechaIngreso;
 
-    @Column(name = "fk_ciudad_cliente")
-    private Long fkCiudadCliente;
+    @Column(name = "fk_ciudad_vendedor")
+    private Long fkCiudadvendedor;
 
     @Column(name = "fk_administrador")
     private Long fkAdministrador;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_ciudad_cliente", insertable = false, updatable = false)
-    private Ciudad ciudadCliente;
+    @JoinColumn(name = "fk_ciudad_vendedor", insertable = false, updatable = false)
+    private Ciudad ciudadvendedor;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_administrador", insertable = false, updatable = false)
@@ -120,12 +120,12 @@ public class Usuario {
         this.fechaIngreso = fechaIngreso;
     }
 
-    public Long getFkCiudadCliente() {
-        return fkCiudadCliente;
+    public Long getFkCiudadvendedor() {
+        return fkCiudadvendedor;
     }
 
-    public void setFkCiudadCliente(Long fkCiudadCliente) {
-        this.fkCiudadCliente = fkCiudadCliente;
+    public void setFkCiudadvendedor(Long fkCiudadvendedor) {
+        this.fkCiudadvendedor = fkCiudadvendedor;
     }
 
     public Long getFkAdministrador() {
@@ -136,12 +136,12 @@ public class Usuario {
         this.fkAdministrador = fkAdministrador;
     }
 
-    public Ciudad getCiudadCliente() {
-        return ciudadCliente;
+    public Ciudad getCiudadvendedor() {
+        return ciudadvendedor;
     }
 
-    public void setCiudadCliente(Ciudad ciudadCliente) {
-        this.ciudadCliente = ciudadCliente;
+    public void setCiudadvendedor(Ciudad ciudadvendedor) {
+        this.ciudadvendedor = ciudadvendedor;
     }
 
     public Usuario getAdministrador() {

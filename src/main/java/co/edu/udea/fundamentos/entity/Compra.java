@@ -28,8 +28,8 @@ public class Compra {
     @Column(name = "estado", nullable = false)
     private EstadoCompraEnum estado;
 
-    @Column(name="fk_cliente", nullable=false)
-    private Long fkCliente;
+    @Column(name="fk_vendedor", nullable=false)
+    private Long fkvendedor;
 
     @Column(name="fk_producto", nullable=false)
     private Long fkProducto;
@@ -37,8 +37,8 @@ public class Compra {
     // relationships
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="fk_cliente", insertable = false, updatable = false)
-    private Usuario cliente;
+    @JoinColumn(name="fk_vendedor", insertable = false, updatable = false)
+    private Usuario vendedor;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="fk_producto", insertable = false, updatable = false)
@@ -84,12 +84,12 @@ public class Compra {
         this.estado = estado;
     }
 
-    public Long getFkCliente() {
-        return fkCliente;
+    public Long getFkvendedor() {
+        return fkvendedor;
     }
 
-    public void setFkCliente(Long fkCliente) {
-        this.fkCliente = fkCliente;
+    public void setFkvendedor(Long fkvendedor) {
+        this.fkvendedor = fkvendedor;
     }
 
     public Long getFkProducto() {
@@ -100,12 +100,12 @@ public class Compra {
         this.fkProducto = fkProducto;
     }
 
-    public Usuario getCliente() {
-        return cliente;
+    public Usuario getvendedor() {
+        return vendedor;
     }
 
-    public void setCliente(Usuario cliente) {
-        this.cliente = cliente;
+    public void setvendedor(Usuario vendedor) {
+        this.vendedor = vendedor;
     }
 
     public Producto getProducto() {

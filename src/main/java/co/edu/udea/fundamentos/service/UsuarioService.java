@@ -46,9 +46,9 @@ public class UsuarioService {
     }
 
     public void validarTipo(Usuario usuario) {
-        if (usuario.getTipo().equals(TipoUsuario.CLIENTE)) {
+        if (usuario.getTipo().equals(TipoUsuario.VENDEDOR)) {
             if (Objects.isNull(usuario.getFechaIngreso()) ||
-                    Objects.isNull(usuario.getFkCiudadCliente()) || Objects.isNull(usuario.getFkAdministrador())) {
+                    Objects.isNull(usuario.getFkCiudadvendedor()) || Objects.isNull(usuario.getFkAdministrador())) {
                 throw new BusinessException(messages.get("usuario.informacion.incompleta"));
             }
         }

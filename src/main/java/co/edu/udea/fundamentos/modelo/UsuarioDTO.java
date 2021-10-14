@@ -17,12 +17,12 @@ public class UsuarioDTO {
     private TipoUsuario tipo;
     private String nombre;
 
-    //Cliente
+    //Vededor
 
     private LocalDate fechaIngreso;
-    private Long fkCiudadCliente;
+    private Long fkCiudadVededor;
     private Long fkAdministrador;
-    private CiudadDTO ciudadCliente;
+    private CiudadDTO ciudadVendedor;
     private UsuarioDTO administrador;
 
     //Administrador
@@ -87,12 +87,12 @@ public class UsuarioDTO {
         this.fechaIngreso = fechaIngreso;
     }
 
-    public Long getFkCiudadCliente() {
-        return fkCiudadCliente;
+    public Long getFkCiudadVendedor() {
+        return fkCiudadVededor;
     }
 
-    public void setFkCiudadCliente(Long fkCiudadCliente) {
-        this.fkCiudadCliente = fkCiudadCliente;
+    public void setFkCiudadVededor(Long fkCiudadVededor) {
+        this.fkCiudadVededor = fkCiudadVededor;
     }
 
     public Long getFkAdministrador() {
@@ -103,12 +103,12 @@ public class UsuarioDTO {
         this.fkAdministrador = fkAdministrador;
     }
 
-    public CiudadDTO getCiudadCliente() {
-        return ciudadCliente;
+    public CiudadDTO getCiudadVendedor() {
+        return ciudadVendedor;
     }
 
-    public void setCiudadCliente(CiudadDTO ciudadCliente) {
-        this.ciudadCliente = ciudadCliente;
+    public void setCiudadVendedor(CiudadDTO ciudadVendedor) {
+        this.ciudadVendedor = ciudadVendedor;
     }
 
     public UsuarioDTO getAdministrador() {
